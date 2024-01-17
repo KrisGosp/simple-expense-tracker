@@ -1,3 +1,5 @@
+import { categories } from "../categories.ts";
+
 type ExpenseFilterProps = {
   onSelectCategory: (category: string) => void;
 };
@@ -11,9 +13,11 @@ const ExpenseFilter = ({ onSelectCategory }: ExpenseFilterProps) => {
       <option selected value="">
         Open this select menu
       </option>
-      <option value="Groceries">Groceries</option>
-      <option value="Utilities">Utilities</option>
-      <option value="Entertainment">Entertainment</option>
+      {categories.map((c) => (
+        <option key={c} value={c}>
+          {c}
+        </option>
+      ))}
     </select>
   );
 };
