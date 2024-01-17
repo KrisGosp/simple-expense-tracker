@@ -12,7 +12,7 @@ type ExpenseListProps = {
 
 const ExpenseList = ({ expenses, onDelete }: ExpenseListProps) => {
   return (
-    <table className="table table-bordered">
+    <table className="table table-bordered mt-5">
       <thead>
         <tr>
           <th>Description</th>
